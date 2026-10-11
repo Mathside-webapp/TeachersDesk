@@ -1,0 +1,16 @@
+TEACHER DESK — DESKTOP APP LAUNCH FIX
+
+Problem: Opening the installed Teacher Desk shortcut sometimes focuses the last opened external website (such as GradeDock).
+
+Changes in this package:
+- PWA manifest start_url points explicitly to the Teacher Desk homepage.
+- PWA launch_handler uses navigate-existing (supported Chromium browsers) so reopening the app navigates to Teacher Desk, rather than only focusing a previously navigated window.
+- Service worker cache version is updated and can show the cached Teacher Desk home while offline.
+- Website and shortcut links continue to open in a separate tab/window.
+
+Deploy the complete ZIP (or changed manifest + service worker) to the exact website you use for Teacher Desk.
+On the Teacher Desk page, refresh twice after deployment so the updated service worker/manifest can activate.
+Close all Teacher Desk windows and open its installed shortcut again.
+If the shortcut still opens GradeDock, the shortcut may be pointing to the wrong URL or using stale installed-app metadata. Uninstall only the Teacher Desk app/shortcut from the browser's installed apps list and reinstall Teacher Desk while on its correct website address. Do NOT uninstall or delete GradeDock, Mathside or EduCore.
+
+If this still persists, send the exact Teacher Desk URL and the browser (Chrome/Edge/Opera) and we can verify the correct install path.

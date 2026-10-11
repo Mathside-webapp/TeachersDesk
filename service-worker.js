@@ -1,4 +1,4 @@
-const VERSION='teacherdesk-v20-launch-home';
+const VERSION='teacherdesk-v21-independent-launch';
 const SHELL=["./","./index.html","./offline.html","./css/styles.css","./css/responsive.css","./css/desk.css","./css/landing.css","./css/toasts.css","./js/app.bundle.js","./js/toasts.js","./js/startup.js","./js/app.js","./js/config.js","./js/utils.js","./js/store.js","./js/ui.js","./js/websites.js","./js/editors.js","./js/auth.js","./js/vendor/supabase.js","./assets/logo.png","./assets/hero.png","./assets/desk-hero-stage.jpg","./assets/fonts/inter.ttf","./assets/fonts/poppins.ttf","./manifest.webmanifest","./assets/icons/icon-192.png","./assets/icons/icon-512.png","./assets/icons/apple-touch-icon.png","./assets/icons/maskable-512.png"];
 self.addEventListener('install',event=>event.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(SHELL))));
 self.addEventListener('activate',event=>event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('teacherdesk-')&&k!==VERSION).map(k=>caches.delete(k)))),self.clients.claim()])));

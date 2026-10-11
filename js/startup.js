@@ -59,3 +59,20 @@ window.addEventListener('error', function (event) {
     }
   }, { passive: false });
 })();
+
+// Protect the Teacher Desk app window from links to other websites.
+// Opening an external resource should never replace the Teacher Desk page.
+document.addEventListener('click', event => {
+  const anchor = event.target.closest?.('a[href]');
+  if (!anchor || event.defaultPrevented) return;
+  try {
+    const destination = new URL(anchor.href, document.baseURI);
+    const appBase = new URL('./', document.baseURI);
+    const insideTeacherDesk = destination.origin === appBase.origin &&
+      destination.pathname.startsWith(appBase.pathname);
+    if ((destination.protocol === 'https:' || destination.protocol === 'http:') && !insideTeacherDesk) {
+      anchor.target = '_blank';
+      anchor.rel = 'noopener noreferrer';
+    }
+  } catch { /* Leave invalid or unsupported links to the browser. */ }
+}, true);

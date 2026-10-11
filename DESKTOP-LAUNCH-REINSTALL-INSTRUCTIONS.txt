@@ -1,0 +1,27 @@
+TEACHER DESK — DESKTOP APP FIX (OCTOBER 2026)
+
+WHAT CHANGED
+- Launches a new Teacher Desk window every time, instead of reusing the last window.
+- Assigns Teacher Desk a distinct PWA identity, separate from older installations.
+- Ensures external shortcut/website links open outside Teacher Desk (new tab/window).
+- No change to Supabase settings, passwords, website links, or dashboard.
+
+IMPORTANT: Old Windows app icons do not automatically switch to a new application identity.
+DO THESE STEPS ON YOUR COMPUTER:
+1. Upload and commit the complete contents of TeacherDesk to your Teacher Desk GitHub Pages repo.
+2. In the browser used to install Teacher Desk, open chrome://apps (Chrome) or edge://apps (Edge).
+3. Find the OLD Teacher Desk app. Uninstall/remove the OLD app only. Do NOT remove GradeDock/Mathside.
+   If prompted, do NOT select a checkbox to delete browser data.
+4. Remove the old Teacher Desk icon from your Windows taskbar or desktop.
+5. Open your correct Teacher Desk GitHub Pages URL in that same browser. Verify the address is NOT GradeDock.
+6. Reload the page (Ctrl+Shift+R), then install Teacher Desk from the browser's Install button/menu.
+7. Pin the NEW Teacher Desk desktop icon; open it after closing all app windows.
+
+If this still opens GradeDock:
+- In Chrome go to chrome://apps and right-click Teacher Desk. Try opening it from there.
+- Inspect the Windows shortcut Properties > Target (please share a screenshot; do not share private browser profile data).
+- Send the exact public URLs of Teacher Desk and GradeDock so the launch origin and folder can be compared.
+
+TECHNICAL CHANGE: manifest id = ./teacher-desk-desktop-app
+                  launch_handler.client_mode = navigate-new
+

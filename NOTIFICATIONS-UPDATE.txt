@@ -1,0 +1,24 @@
+Teacher Desk — Modern Notifications Update
+=========================================
+
+The old centered, solid maroon "Signed out" message has been replaced by a
+small, dismissible, accessible toast notification system.
+
+- Desktop: bottom right, raised above the existing mode toggle when signed in.
+- Signed-out landing page: bottom right with extra bottom margin.
+- Mobile: compact, near the bottom and clear of the header.
+- Success, error, warning, information icons with understated accent colors.
+- Multiple messages stack; the stack displays up to 3 at once.
+- A repeated identical message is shown only once while already visible.
+- Auto-dismiss: 4.5 seconds normally, 7 seconds for errors.
+- Hover and keyboard focus pause dismissal; close buttons allow immediate dismissal.
+- Respects reduced-motion preferences and uses screen-reader status/alert roles.
+- All text is inserted safely via textContent.
+
+No Supabase configuration, database, SQL, account, or storage changes.
+For GitHub Pages: deploy the complete folder contents to the existing site
+root; keep the existing js/config.js if your deployed configuration differs.
+After deployment, allow the updated service worker to refresh the cached site.
+
+Files changed: index.html, css/toasts.css, js/toasts.js, js/ui.js,
+js/app.js, js/app.bundle.js, service-worker.js.

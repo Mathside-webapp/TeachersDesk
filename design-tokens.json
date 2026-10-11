@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-11T08:32:12.5090803+08:00",
+  "title": "Design System: Teacher Desk",
+  "extensions": {
+    "colorMeta": {
+      "maroon": {
+        "role": "primary",
+        "displayName": "Desk Maroon"
+      },
+      "sidebar": {
+        "role": "primary",
+        "displayName": "Burgundy Leather"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper"
+      },
+      "brass": {
+        "role": "secondary",
+        "displayName": "Desk Brass"
+      },
+      "body-ink": {
+        "role": "neutral",
+        "displayName": "Brown Ink"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero Title",
+        "purpose": "Large desktop hero heading; responsive sizes are 45px at 950px and 35px at 700px."
+      },
+      "subtitle": {
+        "displayName": "Poppins Subtitle",
+        "purpose": "Page descriptions, greetings, and website descriptions; sizes depend on context."
+      },
+      "label": {
+        "displayName": "Inter Control Label",
+        "purpose": "Readable controls, filters, and supporting labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "raised",
+        "value": "inset 0 1px 1px #ffffffa8,0 3px 5px #42251626,0 9px 20px #4225160c",
+        "purpose": "Cream raised controls."
+      },
+      {
+        "name": "pressed",
+        "value": "inset 0 2px 5px #28110d45,0 1px 0 #ffffff90",
+        "purpose": "Pressed controls and website icons."
+      },
+      {
+        "name": "primary",
+        "value": "inset 0 1px 1px #e6a4ac88,0 3px 5px #41111b33",
+        "purpose": "Burgundy primary actions."
+      },
+      {
+        "name": "website",
+        "value": "inset 0 2px 2px #fff,0 4px 7px #7450331a,0 10px 18px #7450330a",
+        "purpose": "Website tiles at rest."
+      },
+      {
+        "name": "website-hover",
+        "value": "inset 0 2px 2px #fff,0 5px 12px #7450332b",
+        "purpose": "Website hover without translation."
+      },
+      {
+        "name": "panel",
+        "value": "inset 0 1px 2px #fff,0 5px 11px #6441261c",
+        "purpose": "Tasks, lists, and settings."
+      },
+      {
+        "name": "dialog",
+        "value": "inset 0 2px 2px #fff,0 20px 50px #39231d4a",
+        "purpose": "Modal surface."
+      },
+      {
+        "name": "launcher",
+        "value": "inset 0 2px 2px #fff,inset 0 -3px 4px #c3a77d33,0 6px 9px #69432122,0 16px 24px #65401c0a",
+        "purpose": "Shortcut launcher tiles."
+      }
+    ],
+    "focus": [
+      {
+        "name": "visible-control",
+        "selector": "button:focus-visible,a:focus-visible,input:focus-visible",
+        "outline": "3px solid #a26c1e",
+        "outlineOffset": "3px"
+      },
+      {
+        "name": "form-field",
+        "selector": ".field input:focus,.field textarea:focus,.field select:focus",
+        "outline": "2px solid #9c5b6d",
+        "outlineOffset": "1px",
+        "purpose": "More-specific field rule in base stylesheet remains effective."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-state",
+        "value": "box-shadow .12s,background-color .12s",
+        "purpose": "Raised control transition; default CSS easing is ease."
+      },
+      {
+        "name": "website-hover",
+        "value": "box-shadow .15s",
+        "purpose": "Tile hover elevation."
+      },
+      {
+        "name": "mode-knob",
+        "value": "transform .15s",
+        "purpose": "Knob moves from translateX(0) to translateX(24px)."
+      },
+      {
+        "name": "drawer",
+        "value": "transform .2s",
+        "purpose": "Mobile sidebar entrance."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}",
+        "purpose": "Disable transitions and animations for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "700px",
+        "query": "(max-width:700px)"
+      },
+      {
+        "name": "tablet-hero",
+        "value": "950px",
+        "query": "(max-width:950px)"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1250px",
+        "query": "(max-width:1250px)",
+        "purpose": "Final theme uses three Home columns at 701–1250px."
+      },
+      {
+        "name": "wide",
+        "value": "1650px",
+        "query": "(min-width:1650px)",
+        "purpose": "Wide workspace padding; later theme declarations override some earlier sizing."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Raised burgundy action with a physical pressed state.",
+      "html": "<button class=\"ds-primary\">Add Website</button>",
+      "css": ".ds-primary{font:14px/1.5 Inter,Arial,sans-serif;min-height:44px;padding:10px 18px;border:1px solid #65192d;border-radius:12px;color:#fff6ee;background:linear-gradient(#91334c,#68182e);box-shadow:inset 0 1px 1px #e6a4ac88,0 3px 5px #41111b33;cursor:pointer;transition:box-shadow .12s,background-color .12s}.ds-primary:hover{background:linear-gradient(#a6405b,#782039)}.ds-primary:active{box-shadow:var(--pressed,inset 0 2px 5px #28110d45,0 1px 0 #ffffff90);transform:translateY(1px)}.ds-primary:focus-visible{outline:3px solid #a26c1e;outline-offset:3px}.ds-primary:disabled{opacity:.55;cursor:wait}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Paper Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Recessed paper field with an explicit label and form focus ring.",
+      "html": "<label class=\"ds-field\">Website name<input placeholder=\"My teaching tool\"></label>",
+      "css": ".ds-field{display:grid;gap:6px;font:13px/1.5 Inter,Arial,sans-serif;color:#584433}.ds-field input{font:16px/1.5 Inter,Arial,sans-serif;min-height:48px;padding:10px 12px;background:#fffdf5;color:#241b1f;border:1px solid #bfa98f;border-radius:9px;box-shadow:inset 0 2px 3px #6d4d2717}.ds-field input:focus{outline:2px solid #9c5b6d;outline-offset:1px}"
+    },
+    {
+      "name": "Category Filter",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Tactile category capsule; selected appearance uses the primary gradient.",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"true\">All Websites</button>",
+      "css": ".ds-filter{min-height:44px;padding:10px 16px;font:12px/1.5 Inter,Arial,sans-serif;border-radius:30px;border:1px solid #65192d;background:linear-gradient(#91334c,#68182e);color:#fff6ee;box-shadow:inset 0 1px 1px #e6a4ac88,0 3px 5px #41111b33;cursor:pointer;transition:box-shadow .12s,background-color .12s}.ds-filter:hover{background:linear-gradient(#a6405b,#782039)}.ds-filter:active{box-shadow:var(--pressed,inset 0 2px 5px #28110d45,0 1px 0 #ffffff90);transform:translateY(1px)}.ds-filter:focus-visible{outline:3px solid #a26c1e;outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-filter{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Teacher’s Desk",
+    "overview": "Warm paper, burgundy leather, ceramic tiles, and wooden details make the workspace familiar and tangible. The illustrated wooden desk logo anchors the identity. Skeuomorphism is the confirmed direction: inset highlights, shaded edges, pressed controls, clipboard details, and ruled paper express familiar physical objects.",
+    "keyCharacteristics": [
+      "Maroon actions on cream paper",
+      "Helvetica titles, Poppins subtitles, Inter labels",
+      "Raised and pressed states",
+      "44px interaction targets"
+    ],
+    "rules": [
+      {
+        "name": "The Material Rule",
+        "body": "Preserve the light upper edge and darker lower edge of raised surfaces.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Roles Rule",
+        "body": "Keep title, subtitle, and control font families distinct.",
+        "section": "typography"
+      },
+      {
+        "name": "The Physical State Rule",
+        "body": "Hover indicates availability; an inset pressed state indicates action. Honor reduced motion.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do retain the illustrated wooden desk logo.",
+      "Do keep 44px hit targets and visible focus.",
+      "Do keep the launcher Add Website tile and mode switch accessible.",
+      "Do use operation-specific progress feedback."
+    ],
+    "donts": [
+      "Don't flatten the confirmed skeuomorphic identity.",
+      "Don't restore removed navigation panels.",
+      "Don't claim live authentication or synchronization without verification."
+    ]
+  }
+}

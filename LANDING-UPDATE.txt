@@ -1,0 +1,15 @@
+Teacher Desk - Reference Landing Page Update
+
+WHAT CHANGED
+- The approved desktop welcome-page design is implemented with real HTML/CSS, rather than as one flat image.
+- Exactly ONE Sign In and ONE Create Account button appear on the welcome page.
+- The desktop hero uses the approved warm classroom illustration, and the page adapts to tablets and phones.
+- Four feature cards, About and Support sections, and anchor links are included.
+- Existing Supabase connection, password eye toggle, dashboard, and mode switching are unchanged.
+
+INSTALL (GITHUB PAGES)
+Complete ZIP: extract TeacherDesk folder and upload its contents to your website repository, retaining structure.
+Changed ZIP: extract and replace the correspondingly named files in the same paths.
+
+If using GitHub Pages, allow the new service worker cache to refresh; close and reopen the tab after deployment when needed.
+No new SQL or Edge Functions needed.
